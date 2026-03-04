@@ -2,7 +2,6 @@ import axios from "axios";
 
 const api = axios.create({
   //baseURL: "http://localhost:3000/Material",
-  baseURL:'https://mern-educourse.onrender.com'
-});
+  baseURL:'https://mern-educourse.onrender.com/Material'
 
 export default api;

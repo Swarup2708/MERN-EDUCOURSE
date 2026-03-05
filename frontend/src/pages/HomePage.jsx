@@ -22,7 +22,7 @@ const HomePage = () => {
           },
         });
 
-        setMaterials(res.data);
+        setMaterials(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
         console.error("Error fetching materials", error);
         toast.error("Failed to load materials");

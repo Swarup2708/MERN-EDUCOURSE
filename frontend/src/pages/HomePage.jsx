@@ -81,10 +81,10 @@ const HomePage = () => {
         {/* Materials Grid */}
         {!loading && materials.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {materials.map((material) => (
+            {materials.map((materials) => (
               <MaterialCard
-                key={material._id}
-                material={material}
+                key={materials._id}
+                materials={materials}
                 setMaterials={setMaterials}
               />
             ))}

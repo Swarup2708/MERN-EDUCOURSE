@@ -16,7 +16,7 @@ const MaterialCard = ({ material, setMaterials }) => {
 
   const handleDelete = async () => {
     try {
-      await api.delete(`/${material._id}`);
+      await api.delete(`/Materials/${material._id}`);
       setMaterials((prev) =>
         prev.filter((m) => m._id !== material._id)
       );

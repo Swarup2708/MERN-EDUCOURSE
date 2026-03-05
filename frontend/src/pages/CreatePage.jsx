@@ -46,7 +46,7 @@ const CreatePage = () => {
     setLoading(true);
 
     try {
-      await api.post("/", {
+      await api.post("/Materials", {
         ...form,
         publishYear: Number(form.publishYear),
         price: Number(form.price),

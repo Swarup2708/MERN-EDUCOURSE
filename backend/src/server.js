@@ -18,10 +18,10 @@ app.use(cors(
     }
 ))
 app.use(express.json()); 
-app.use("/Material", materialRoutes);
+app.use("/Materials", materialRoutes);
 
 connectDB().then(()=>{
   app.listen(port,()=> {
-    console.log(`http://localhost:${port}/Material`)
+    console.log(`http://localhost:${port}/Materials`)
   })
 })

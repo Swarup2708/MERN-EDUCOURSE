@@ -20,7 +20,7 @@ useEffect(() => {
 
   const fetchMaterial = async () => {
     try {
-      const res = await api.get(`/${id}`);
+      const res = await api.get(`/Materials/${id}`);
       setMaterial(res.data);
     } catch (error) {
       console.error(error);
@@ -40,7 +40,7 @@ useEffect(() => {
       return;
 
     try {
-      await api.delete(`/${id}`);
+      await api.delete(`/Materials/${id}`);
       toast.success("Material deleted successfully");
       navigate("/");
     } catch {
@@ -66,7 +66,7 @@ useEffect(() => {
     setSaving(true);
 
     try {
-      await api.put(`/${id}`, {
+      await api.put(`/Materials/${id}`, {
         ...material,
         publishYear: Number(material.publishYear),
         price: Number(material.price),

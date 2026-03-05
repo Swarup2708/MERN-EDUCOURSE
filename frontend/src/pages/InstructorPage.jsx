@@ -10,7 +10,7 @@ const InstructorPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.get(`/?instructorName=${name}`);
+        const res = await api.get(`/Materials/?instructorName=${name}`);
         setMaterials(res.data);
       } catch (error) {
         console.log("Error fetching instructor materials:", error);

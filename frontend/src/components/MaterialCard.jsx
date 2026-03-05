@@ -44,7 +44,7 @@ const MaterialCard = ({ material, setMaterials }) => {
         </div>
 
         {/* Title */}
-        <Link to={`/materials/${material._id}`}>
+        <Link to={`/Materials/${material._id}`}>
           <div className="mt-4 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
               <BookOpen className="size-4 text-primary" />
@@ -98,7 +98,7 @@ const MaterialCard = ({ material, setMaterials }) => {
           <div className="flex items-center gap-4">
 
             {/* EDIT */}
-            <Link to={`/materials/${material._id}`}>
+            <Link to={`/Materials/${material._id}`}>
             <Edit className="size-4 text-warning" />
             </Link>
 

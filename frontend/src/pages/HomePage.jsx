@@ -15,7 +15,7 @@ const HomePage = () => {
     const fetchMaterials = async () => {
       setLoading(true);
       try {
-        const res = await api.get("/", {
+        const res = await api.get("/Material", {
           params: {
             search: search || undefined,
             difficultyLevel: difficulty || undefined,

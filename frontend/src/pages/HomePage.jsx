@@ -15,14 +15,14 @@ const HomePage = () => {
     const fetchMaterials = async () => {
       setLoading(true);
       try {
-        const res = await api.get("/Material", {
+        const res = await api.get('/Material', {
           params: {
             search: search || undefined,
             difficultyLevel: difficulty || undefined,
           },
         });
 
-        setMaterials(Array.isArray(res.data) ? res.data : []);
+        setMaterials(res.data)
       } catch (error) {
         console.error("Error fetching materials", error);
         toast.error("Failed to load materials");

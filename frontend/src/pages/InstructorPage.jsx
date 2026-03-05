@@ -4,13 +4,13 @@ import api from "../lib/axios";
 import MaterialCard from "../components/MaterialCard";
 
 const InstructorPage = () => {
-  const { name } = useParams();
-  const [materials, setMaterials] = useState([]);
+ const { name } = useParams();
+const decodedName = decodeURIComponent(name);
 
-  useEffect(() => {
+useEffect(() => {
   const fetchData = async () => {
     try {
-      const res = await api.get(`/?instructorName=${name}`);
+      const res = await api.get(`/?instructorName=${decodedName}`);
       setMaterials(res.data);
     } catch (error) {
       console.log(error);
@@ -18,7 +18,7 @@ const InstructorPage = () => {
   };
 
   fetchData();
-}, [name]);
+}, [decodedName]);
 
   return (
     <div className="min-h-screen bg-base-200 p-6">

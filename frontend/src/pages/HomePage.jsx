@@ -21,6 +21,7 @@ const HomePage = () => {
             difficultyLevel: difficulty || undefined,
           },
         });
+        console.log("API response:", res.data);
 
         setMaterials(res.data)
       } catch (error) {
